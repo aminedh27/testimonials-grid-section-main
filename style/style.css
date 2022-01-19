@@ -119,15 +119,3 @@ h4 {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-
-@media (max-width: 500px) {
-  .grid-container {
-    display: grid;
-    /* border: 2px solid black; */
-    height: 69%;
-    width: 65%;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr);
-    grid-gap: 3%;
-  }
-}
