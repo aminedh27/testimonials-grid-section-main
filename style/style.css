@@ -22,10 +22,9 @@ body {
 .grid-container {
   display: grid;
   /* border: 2px solid black; */
-  height: 69%;
-  width: 65%;
+  max-width: 1150px;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: repeat(2, min-content);
   grid-gap: 3%;
 }
 
