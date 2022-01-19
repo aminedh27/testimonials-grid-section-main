@@ -51,7 +51,7 @@ body {
 }
 
 .kira {
-  grid-row: 1 /3;
+  grid-row: -1 /1;
   grid-column: 4/5;
   background-color: hsl(0, 0%, 100%);
   box-shadow: 4px 6px 6px rgba(220, 240, 240, 1);
@@ -120,4 +120,37 @@ h4 {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1024px) {
+  body {
+    padding: 20px;
+  }
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, min-content);
+    width: 95%;
+    grid-gap: 15px;
+  }
+  .daniel {
+    grid-column: 1/3;
+  }
+  .jonathan {
+    grid-column: 3/4;
+  }
+  .kira {
+    grid-column: 1/4;
+    grid-row: 3/4;
+  }
+}
+@media (max-width: 768px) {
+  .grid-container {
+    margin-top: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    grid-template-rows: minmax(auto, auto);
+  }
+  .grid-item {
+    grid-column: unset !important;
+    grid-row: unset !important;
+  }
 }
